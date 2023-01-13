@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 const app = express();
 app.use(express.json());
 
-app.get("/", (rreq: Request, res: Response) => {
+app.get("/", (req: Request, res: Response) => {
   return res.send("DoHung");
 });
 app.post("/api/data", (req: Request, res: Response) => {

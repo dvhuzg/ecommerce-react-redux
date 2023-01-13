@@ -2,8 +2,12 @@ import express, { Request, Response } from "express";
 const app = express();
 app.use(express.json());
 
-app.get("/", (rreq: Request, res: Response) => {
-  return res.send("DoHung");
+app.get("/", (req: Request, res: Response) => {
+  // return res.json({
+  //   success: true,
+  //   name: "DoHung",
+  // });
+  return res.redirect("https://dvhuzg.vercel.app");
 });
 app.post("/api/data", (req: Request, res: Response) => {
   console.log(req.body);

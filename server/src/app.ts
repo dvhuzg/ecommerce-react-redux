@@ -17,5 +17,5 @@ app.all("/api/all", (req: Request, res: Response) => {
   return res.sendStatus(200);
 });
 app.listen(3000, () => {
-  console.log("Application is running on https://localhost:3000");
+  console.log("Application is running on http://localhost:3000");
 });

@@ -1,9 +1,14 @@
-import React from "react";
+import { useState } from "react";
 import { Button } from "../../subComponent/Button/Button";
 import Input from "../../subComponent/Input/Input";
 import styles from "./SignUp.module.scss";
-
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.overlay}></div>
@@ -13,10 +18,15 @@ const Login = () => {
         </div>
         <div className={styles.content}>
           <span className={styles.headerTitle}>Sign Up</span>
-          <Button text="Sign up with Google" onClick={() => alert("Google")} />
+          <Button
+            text="Sign up with Google"
+            onClick={() => alert("Google")}
+            icon="fa-brands fa-google"
+          />
           <Button
             text="Sign up with Facebook"
             onClick={() => alert("Facebook")}
+            icon="fa-brands fa-facebook-f"
           />
           <div className={styles.orLine}>
             <span className={styles.line}></span>
@@ -30,14 +40,21 @@ const Login = () => {
             <Input type="email" />
             <div className={styles.passwordInput}>
               <label htmlFor="">Password</label>
-              <Input type="password" />
-              <i className="fa-solid fa-eye"></i>
+              <Input type={showPassword ? "text" : "password"} />
+              {showPassword ? (
+                <i className="fa-solid fa-eye" onClick={handleShowPassword} />
+              ) : (
+                <i
+                  className="fa-solid fa-eye-slash"
+                  onClick={handleShowPassword}
+                />
+              )}
             </div>
             <div className={styles.newsCheck}>
               <Input type="checkbox" />
               <span>Sign up for news about our sales and new arrivals</span>
             </div>
-            <Button text="Sign up" />
+            <Button text="Sign up" type="submit" />
           </form>
           <div className={styles.askForLogin}>
             Already have an account?

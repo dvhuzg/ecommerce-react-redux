@@ -87,6 +87,7 @@
     display: flex;
     font-size: 14px;
     margin-bottom: 20px;
+    align-items: center;
     input {
       margin: 0;
       cursor: pointer;
@@ -111,7 +112,17 @@
 .note {
   font-size: 12px;
   color: #5e6a7c;
+  padding-bottom: 20px;
   a {
     color: inherit;
+  }
+}
+.passwordInput {
+  position: relative;
+  i {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 6px);
+    cursor: pointer;
   }
 }

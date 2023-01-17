@@ -5,12 +5,12 @@ type TProps = {
   onClick?: (event: any) => void;
   type?: "submit" | "submit";
   icon?: string;
-  style?: string;
 };
+
 export const Button: React.FC<TProps> = ({ text, onClick, type, icon }) => {
   return (
     <div>
-      <button onClick={onClick} className={styles.style} type={type}>
+      <button onClick={onClick} className={styles.btn} type={type}>
         {icon !== "" ? <i className={icon}></i> : ""}
         {text}
       </button>

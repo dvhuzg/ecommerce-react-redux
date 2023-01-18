@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "../../subComponent/Button/Button";
 import Input from "../../subComponent/Input/Input";
 import styles from "./SignUp.module.scss";
-const Login = () => {
+const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleShowPassword = () => {
@@ -51,8 +51,10 @@ const Login = () => {
               )}
             </div>
             <div className={styles.newsCheck}>
-              <Input type="checkbox" />
-              <span>Sign up for news about our sales and new arrivals</span>
+              <Input type="checkbox" id="checkbox" />
+              <label htmlFor="checkbox">
+                Sign up for news about our sales and new arrivals
+              </label>
             </div>
             <Button text="Sign up" type="submit" />
           </form>
@@ -71,4 +73,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

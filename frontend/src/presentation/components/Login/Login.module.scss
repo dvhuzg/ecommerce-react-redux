@@ -24,6 +24,7 @@
   height: auto;
   padding: 15px;
   border-radius: 25px;
+  min-width: 445px;
 }
 .closeBtn {
   width: 100%;
@@ -129,5 +130,12 @@
     right: 10px;
     top: calc(50% - 6px);
     cursor: pointer;
+  }
+  .pwTitle {
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-size: 12px;
+    }
   }
 }

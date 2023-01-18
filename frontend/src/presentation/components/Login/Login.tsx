@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Button } from "../../subComponent/Button/Button";
 import Input from "../../subComponent/Input/Input";
-import styles from "./SignUp.module.scss";
+import styles from "./Login.module.scss";
 import { Link } from "react-router-dom";
-
-const SignUp = () => {
+const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleShowPassword = () => {
@@ -19,7 +18,7 @@ const SignUp = () => {
           <i className="fa-solid fa-xmark"></i>
         </div>
         <div className={styles.content}>
-          <span className={styles.headerTitle}>Sign Up</span>
+          <span className={styles.headerTitle}>Log in</span>
           <Button
             text="Sign up with Google"
             onClick={() => alert("Google")}
@@ -36,12 +35,13 @@ const SignUp = () => {
             <span className={styles.line}></span>
           </div>
           <form action="" className={styles.signUpForm}>
-            <label htmlFor="">Full name</label>
-            <Input type="text" />
             <label htmlFor="">Email</label>
             <Input type="email" />
             <div className={styles.passwordInput}>
-              <label htmlFor="">Password</label>
+              <div className={styles.pwTitle}>
+                <label htmlFor="">Password</label>
+                <span>Forgot password?</span>
+              </div>
               <Input type={showPassword ? "text" : "password"} />
               {showPassword ? (
                 <i className="fa-solid fa-eye" onClick={handleShowPassword} />
@@ -52,22 +52,12 @@ const SignUp = () => {
                 />
               )}
             </div>
-            <div className={styles.newsCheck}>
-              <Input type="checkbox" id="checkbox" />
-              <label htmlFor="checkbox">
-                Sign up for news about our sales and new arrivals
-              </label>
-            </div>
-            <Button text="Sign up" type="submit" />
+
+            <Button text="Log in" type="submit" />
           </form>
           <div className={styles.askForLogin}>
-            Already have an account?
-            <Link to="/login">Log in</Link>
-          </div>
-          <div className={styles.note}>
-            By signing up, you agree to out{" "}
-            <a href="https://dvhuzg.vercel.app">Privacy Policy</a> and{" "}
-            <a href="https://dvhuzg.vercel.app">Terms of Service</a>
+            Don't have an account?
+            <Link to="/signup">Sign up</Link>
           </div>
         </div>
       </div>
@@ -75,4 +65,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Login;

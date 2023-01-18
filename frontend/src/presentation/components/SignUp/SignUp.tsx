@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button } from "../../subComponent/Button/Button";
 import Input from "../../subComponent/Input/Input";
 import styles from "./SignUp.module.scss";
+import { Link } from "react-router-dom";
+
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -60,7 +62,7 @@ const SignUp = () => {
           </form>
           <div className={styles.askForLogin}>
             Already have an account?
-            <a href="https://dvhuzg.vercel.app">Log in</a>
+            <Link to="/login">Log in</Link>
           </div>
           <div className={styles.note}>
             By signing up, you agree to out{" "}

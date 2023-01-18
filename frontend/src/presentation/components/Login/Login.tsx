@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "../../subComponent/Button/Button";
 import Input from "../../subComponent/Input/Input";
 import styles from "./Login.module.scss";
+import { Link } from "react-router-dom";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -56,7 +57,7 @@ const Login = () => {
           </form>
           <div className={styles.askForLogin}>
             Don't have an account?
-            <a href="https://dvhuzg.vercel.app">Sign up</a>
+            <Link to="/signup">Sign up</Link>
           </div>
         </div>
       </div>

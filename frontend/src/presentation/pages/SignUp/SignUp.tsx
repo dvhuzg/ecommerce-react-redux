@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Button } from "../../subComponent/Button/Button";
-import Input from "../../subComponent/Input/Input";
+import { Button } from "../../components/Button/Button";
+import Input from "../../components/Input/Input";
 import styles from "./SignUp.module.scss";
 import { Link } from "react-router-dom";
 

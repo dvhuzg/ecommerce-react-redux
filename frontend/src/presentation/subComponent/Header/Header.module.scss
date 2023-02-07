@@ -88,6 +88,7 @@
   justify-content: space-between;
   width: $container-width;
   margin: auto;
+  margin-top: 5px;
 }
 .logo {
   display: flex;
@@ -99,19 +100,45 @@
   }
   h2 {
     margin: 0;
+    font-size: $text-xl;
   }
 }
 .search {
   display: flex;
-  width: 100%;
   position: relative;
+  border: 1px solid $neutral300;
+  border-radius: 50px;
+  width: 65%;
+  overflow: hidden;
+  align-items: center;
   i {
-    position: absolute;
+    // position: absolute;
+    margin-left: 10px;
   }
   input {
+    font-size: 15px;
+    padding: 12px 0 12px 5px;
     width: 100%;
+    flex: 1;
+    outline: none;
+    border: none;
   }
 }
 .btnSet {
   display: flex;
+  align-items: center;
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .loginBtn {
+    &:hover {
+      color: $rose700;
+    }
+    button {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
 }

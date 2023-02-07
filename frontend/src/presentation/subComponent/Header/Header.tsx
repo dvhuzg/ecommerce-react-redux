@@ -89,7 +89,7 @@ const Header = () => {
         <div className={styles.btnSet}>
           <div className={styles.loginBtn}>
             <i className="fa-regular fa-user"></i>
-            <button>Log in</button>
+            <button onClick={() => console.log("dohung")}>Log in</button>
           </div>
           <div className={styles.wishlist}>
             <button>

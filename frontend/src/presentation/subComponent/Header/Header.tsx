@@ -1,21 +1,16 @@
 import styles from "./Header.module.scss";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Input from "../../components/Input/Input";
+import { TLanguage } from "../../../type";
+import { initLanguage, languageList } from "../../../initData";
 const Header = () => {
-  type TLanguage = {
-    id: number;
-    img: string;
-    name: string;
+  const navigate = useNavigate();
+  const goTo = (path: string) => (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    navigate(path);
   };
-  const languageList = [
-    { id: 1, img: "../../images/united-states.png", name: "EN, $" },
-    { id: 2, img: "../../images/vietnam.png", name: "VN, VND" },
-  ];
-  const [chosenLanguage, setChosenLanguage] = useState<TLanguage>({
-    id: 1,
-    img: "../../images/united-states.png",
-    name: "EN, $",
-  });
+  const [chosenLanguage, setChosenLanguage] = useState<TLanguage>(initLanguage);
   const [openLang, setOpenLang] = useState(false);
   const onChooseLanguage =
     (lang: TLanguage) => (_: React.MouseEvent<HTMLButtonElement>) => {
@@ -89,7 +84,7 @@ const Header = () => {
         <div className={styles.btnSet}>
           <div className={styles.loginBtn}>
             <i className="fa-regular fa-user"></i>
-            <button onClick={() => console.log("dohung")}>Log in</button>
+            <button onClick={goTo(`/login`)}>Log in</button>
           </div>
           <div className={styles.wishlist}>
             <button>

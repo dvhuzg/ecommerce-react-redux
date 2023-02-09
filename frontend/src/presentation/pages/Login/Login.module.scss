@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #9fa2aa;
+  z-index: 1;
+}
+.wrapper {
+  position: fixed;
+  z-index: 2;
+  background-color: #fff;
+  height: auto;
+  padding: 15px;
+  border-radius: 25px;
+  min-width: 445px;
+}
+.closeBtn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.content {
+  padding: 0 30px;
+  button {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f1f5f9;
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.headerTitle {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 16px;
+}
+.orLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  margin-top: 16px;
+  .line {
+    height: 1px;
+    background-color: #f1f5f9;
+    width: 150px;
+  }
+  .text {
+    font-size: 14px;
+    color: #64748b;
+  }
+}
+.signUpForm {
+  margin-top: 20px;
+  label {
+    color: #475569;
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: block;
+  }
+  input {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #94a3b8;
+    border-radius: 4px;
+    padding: 10px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  .newsCheck {
+    width: auto;
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 20px;
+    align-items: center;
+    input {
+      margin: 0;
+      cursor: pointer;
+    }
+    label {
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  }
+  button[type="submit"] {
+    background-color: #000;
+    color: #fff;
+  }
+}
+.askForLogin {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  margin: 12px 0;
+  a {
+    margin-left: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+  }
+}
+.note {
+  font-size: 12px;
+  color: #5e6a7c;
+  padding-bottom: 20px;
+  a {
+    color: inherit;
+  }
+}
+.passwordInput {
+  position: relative;
+  i {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 6px);
+    cursor: pointer;
+  }
+  .pwTitle {
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-size: 12px;
+    }
+  }
+}

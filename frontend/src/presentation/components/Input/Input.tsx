@@ -4,11 +4,7 @@ type TProps = {
   id?: string;
 };
 const Input: React.FC<TProps> = ({ type, id }) => {
-  return (
-    <div>
-      <input type={type} id={id} />
-    </div>
-  );
+  return <input type={type} id={id} />;
 };
 
 export default Input;

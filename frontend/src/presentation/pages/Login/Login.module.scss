@@ -30,6 +30,16 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  button {
+    background: transparent;
+    border: 1px #9fa2aa solid;
+    border-radius: 50%;
+    padding: 4px 7px;
+    cursor: pointer;
+    &:hover {
+      background-color: #f1f5f9;
+    }
+  }
 }
 .content {
   padding: 0 30px;

@@ -2,10 +2,14 @@ import { useState } from "react";
 import { Button } from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
 import styles from "./Login.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigate = useNavigate();
+  const goTo = (path: string) => (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    navigate(path);
+  };
   const [showPassword, setShowPassword] = useState(false);
-
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
   };
@@ -15,7 +19,9 @@ const Login = () => {
       <div className={styles.overlay}></div>
       <div className={styles.wrapper}>
         <div className={styles.closeBtn}>
-          <i className="fa-solid fa-xmark"></i>
+          <button onClick={goTo("/")}>
+            <i className="fa-solid fa-xmark"></i>
+          </button>
         </div>
         <div className={styles.content}>
           <span className={styles.headerTitle}>Log in</span>
